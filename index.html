@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добро пожаловать!</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #2d3748;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 40px 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: inline-block;
+      animation: wave 1.5s infinite;
+      transform-origin: 70% 70%;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      color: #1a202c;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #718096;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #667eea;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s ease, transform 0.1s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      background: #5a67d8;
+      transform: translateY(-1px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      20% { transform: rotate(14deg); }
+      40% { transform: rotate(-8deg); }
+      60% { transform: rotate(14deg); }
+      80% { transform: rotate(-4deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <div class="emoji">👋</div>
+    <h1>Добро пожаловать!</h1>
+    <p>Рады видеть вас здесь. Этот сайт готов к использованию и дальнейшей настройке.</p>
+    <button class="btn" onclick="alert('Привет! Всё отлично работает.')">Нажми меня</button>
+  </main>
+
+</body>
+</html>
